@@ -1,0 +1,30 @@
+.wrapper_listInventories {
+    display: flex;
+    margin-top: 171px;
+    background-color: chartreuse;
+    width: 54%;
+    height: 78%;
+    position: absolute;
+    left: 308.5px;
+    overflow-x: hidden;
+}
+
+.wrapper_listInventories::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+.listInventories {
+    display: flex;
+    flex-wrap: wrap;
+    width: 65%;
+}
+
+.descriptionInventory {
+    height: 650px;
+    width: 30%;
+    /* position: fixed; */
+    z-index: 1000;
+    top: 50px;
+    right: 10px;
+}

@@ -1,0 +1,62 @@
+.navbar {
+    width: 82%;
+    height: 7%;
+    margin-left: 309px;
+    margin-top: 117px;
+    background-color: rgb(140, 140, 140);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navItem {
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    transition: .6s;
+}
+
+/* .navItem:hover {
+    color: #db3826;
+    padding: 10px 20px 10px 20px;
+    border-radius: 10px;
+    background-color: white;
+} */
+
+.nav {
+    width: 20%;
+    height: 84.8%;
+    position: absolute;
+    z-index: 2;
+    top: 117px;
+    transition: 1s;
+}
+
+.wrapper {
+    min-height: 100vh;
+    display: flex;
+}
+
+.content_wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-image: url('../../assets/toys.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navItem {
+        margin: 5px 0;
+    }
+}

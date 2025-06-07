@@ -1,0 +1,279 @@
+/* Style cơ bản cho container */
+.login-container {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+        url('../../assets/lq.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Form đăng nhập */
+.login-form {
+    width: 90%;
+    max-width: 400px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+    padding: 30px;
+    border-radius: 15px;
+    backdrop-filter: blur(8px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Animation fadeIn */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Logo */
+.logo {
+    width: 100px;
+    height: 100px;
+    background: url('../../assets/logo.png') no-repeat center;
+    background-size: contain;
+    margin-bottom: 10px;
+}
+
+/* Tiêu đề */
+.title {
+    font-weight: bold;
+    font-family: "Oxanium", sans-serif;
+    color: #fff;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+/* Input các trường */
+.input-field {
+    width: 100%;
+    height: 60px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    padding-left: 12px;
+    margin-bottom: 10px;
+    transition: all 0.3s;
+}
+
+.input-field:focus {
+    outline: none;
+    border-color: white;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+}
+
+/* Captcha */
+.captcha-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.captcha {
+    flex: 1;
+    height: 40px;
+    color: white;
+    background: none;
+    border: 1px solid white;
+    margin-right: 10px;
+    border-radius: 8px;
+    padding-left: 12px;
+}
+
+.captcha-img {
+    width: 130px;
+    height: 40px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.captcha-btn {
+    width: 40px;
+    height: 40px;
+    background: url('../../assets/reload.png') no-repeat center;
+    background-size: contain;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.captcha-btn:hover {
+    transform: rotate(360deg);
+}
+
+/* Nút đăng nhập */
+.login-btn {
+    width: 100%;
+    height: 50px;
+    background: linear-gradient(90deg, #ff416c, #ff4b2b);
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+.login-btn:hover {
+    background: linear-gradient(90deg, #ff4b2b, #ff416c);
+    transform: scale(1.05);
+}
+
+/* Liên kết quên mật khẩu */
+.forget-password {
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
+
+/* Thông báo lỗi */
+.error-message {
+    color: #ff6347;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Media query cho responsive */
+@media (max-width: 768px) {
+
+    /* Chỉnh kích thước form cho các thiết bị nhỏ hơn */
+    .login-form {
+        width: 85%;
+        padding: 20px;
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .login-btn {
+        height: 45px;
+    }
+
+    .input-field {
+        height: 50px;
+        font-size: 1rem;
+    }
+
+    .captcha {
+        height: 35px;
+    }
+
+    .captcha-img {
+        width: 120px;
+        height: 35px;
+    }
+
+    /* Giảm kích thước logo */
+    .logo {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    /* Chỉnh kích thước form cho các thiết bị siêu nhỏ (điện thoại) */
+    .login-form {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .title {
+        font-size: 1.3rem;
+    }
+
+    .login-btn {
+        height: 40px;
+    }
+
+    .input-field {
+        height: 45px;
+        font-size: 0.9rem;
+    }
+
+    .captcha {
+        height: 35px;
+        font-size: 0.9rem;
+    }
+
+    .captcha-img {
+        width: 100px;
+        height: 35px;
+    }
+
+    /* Giảm kích thước logo */
+    .logo {
+        width: 70px;
+        height: 70px;
+    }
+
+    .forget-password {
+        font-size: 0.8rem;
+    }
+
+    .error-message {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .login-form {
+        padding: 10px;
+    }
+
+    .title {
+        font-size: 1.2rem;
+    }
+
+    .login-btn {
+        height: 38px;
+    }
+
+    .input-field {
+        height: 40px;
+        font-size: 0.9rem;
+    }
+
+    .captcha {
+        height: 30px;
+        font-size: 0.85rem;
+    }
+
+    .captcha-img {
+        width: 90px;
+        height: 30px;
+    }
+
+    /* Chỉnh logo nhỏ hơn */
+    .logo {
+        width: 60px;
+        height: 60px;
+    }
+
+    .forget-password {
+        font-size: 0.75rem;
+    }
+
+    .error-message {
+        font-size: 0.75rem;
+    }
+}

@@ -1,0 +1,13 @@
+.wrapper_inventory {
+    width: 100px;
+    height: 50px;
+    border: 1px solid red;
+    background-color: black;
+}
+
+/* .wrapper_inventory:hover {
+    cursor: pointer;
+    scale: 1.2;
+    background-color: #6c4839;
+    ;
+} */
